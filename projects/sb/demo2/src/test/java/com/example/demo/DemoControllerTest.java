@@ -6,7 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.demo.DemoController;
+import com.example.demo.CustomersController;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -17,7 +18,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 class DemoControllerTest {
 
     @Autowired
-    private DemoController demoController;
+    private CustomersController demoController;
 
     @BeforeEach
     void setUp() {
@@ -45,7 +46,7 @@ class DemoControllerTest {
     void findCustomerById() {
         int id = 1;
         ResponseEntity ret = demoController.findCustomerById(id);
-        assert(ret.getStatusCode()==200);
+        assert(ret.getStatusCode()== HttpStatus.OK);
         System.out.print(">" + ret + "<");
         assertThat(ret).isNotNull();
     }
