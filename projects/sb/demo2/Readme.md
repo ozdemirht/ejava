@@ -29,17 +29,38 @@ API Endpoints:
  | mvn clean test | mvnw clean test                                | Runs unit tests     |
  | mvn clean test | mvnw clean test -Dtest=CustomersControllerTest | Runs unit tests for CustomerControllerTest |
 
-# TDD (JUnit 5 and Mockito)
-Tests need to match to each layer. 
-1. Controller
-1. Service
-1. Repository
-1. Entity
 
 # Project Directory Structure
 The project directory structure is simple not following Hexagonal Architecture 
 recommendations in the 
 [article](https://medium.com/@bytecoders/hexagonal-architecture-in-spring-boot-the-ultimate-guide-for-spring-boot-f39ba348fd96)
+
+'''
+├── src
+│   ├── controller
+│   │   ├── **/*.css
+│   ├── views
+│   ├── model
+│   ├── index.js
+├── public
+│   ├── css
+│   │   ├── **/*.css
+│   ├── images
+│   ├── js
+│   ├── index.html
+├── dist (or build
+├── node_modules
+├── package.json
+├── package-lock.json
+└── .gitignore
+'''
+
+# TDD (JUnit 5 and Mockito)
+Tests need to match to each layer.
+1. Controller
+1. Service
+1. Repository
+1. Entity
 
 # References
 1. [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
