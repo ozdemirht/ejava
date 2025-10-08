@@ -35,25 +35,36 @@ The project directory structure is simple not following Hexagonal Architecture
 recommendations in the 
 [article](https://medium.com/@bytecoders/hexagonal-architecture-in-spring-boot-the-ultimate-guide-for-spring-boot-f39ba348fd96)
 
-'''
-├── src
-│   ├── controller
-│   │   ├── **/*.css
-│   ├── views
-│   ├── model
-│   ├── index.js
-├── public
-│   ├── css
-│   │   ├── **/*.css
-│   ├── images
-│   ├── js
-│   ├── index.html
-├── dist (or build
-├── node_modules
-├── package.json
-├── package-lock.json
-└── .gitignore
-'''
+```text
+│
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───com
+│   │   │       └───example
+│   │   │           └───demo
+│   │   │                   Customer.java
+│   │   │                   CustomersRepository.java
+│   │   │                   DemoApplication.java
+│   │   │                   CustomersService.java
+│   │   │                   CustomersController.java
+│   │   │
+│   │   └───resources
+│   │       │   application.properties
+│   │       │
+│   │       ├───static
+│   │       │       index.html
+│   │       │
+│   │       └───templates
+│   └───test
+│       └───java
+│           └───com
+│               └───example
+│                   └───demo
+│                           DemoApplicationTests.java
+│                           CustomersControllerTest.java
+│                           CustomersCRUDTests.java
+```
 
 # TDD (JUnit 5 and Mockito)
 Tests need to match to each layer.
