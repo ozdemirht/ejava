@@ -1,13 +1,11 @@
 package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
 
 public class CustomersService {
 
     @Autowired
-    private CustomerRepository customerRepository;
+    private CustomersRepository customerRepository;
 
     public Customer addCustomer(String first,String last) {
         Customer response = null;

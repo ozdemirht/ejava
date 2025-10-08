@@ -6,16 +6,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.demo.CustomersController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
 @SpringBootTest
-class DemoControllerTest {
+class CustomersControllerTest {
 
     @Autowired
     private CustomersController demoController;
