@@ -12,6 +12,7 @@ Error Case
 Happy Cases:
  - Input-H1: List-1:[1], List-2:[8], Expected: [9]
  - Input-H2: List-1:[1], List-2:[9], Expected: [1,0]
+ - Input-H2: List-1:[9,9,1], List-2:[9], Expected: [1,0,0,0]
 
 Algorithm
 - Use 2 stacks
@@ -20,7 +21,8 @@ Algorithm
 - while both stacks are not empty
   - pop from both stack as the digit, summing from right to left
   - keep track of 'carry'
-- if one of them are not empty, then  
+- If one of them are not empty, then continue to calc with using carry
+- If both of them are empty, then add 'carry' 
 
 Analysis
 - Space complexity: O(max(A.size(),B.size()))

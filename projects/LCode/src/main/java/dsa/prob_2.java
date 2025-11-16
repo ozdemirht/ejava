@@ -137,6 +137,15 @@ public class prob_2 {
         for(int i=0;i<4;i++) test5_expected.add(0);
         run_test(test5_A, test5_B, test5_expected);
 
+        List<Integer> test6_A = new ArrayList<>();
+        List<Integer> test6_B = new ArrayList<>();
+        List<Integer> test6_expected = new ArrayList<>();
+        test6_A.add(9);test6_A.add(9);test6_A.add(9);test6_A.add(1);
+        test6_B.add(9);
+        test6_expected.add(1);
+        for(int i=0;i<4;i++) test6_expected.add(0);
+        run_test(test6_A, test6_B, test6_expected);
+
         System.out.println("\n====================================================");
     }
 
