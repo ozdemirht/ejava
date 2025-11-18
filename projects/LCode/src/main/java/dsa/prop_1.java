@@ -1,7 +1,7 @@
 package dsa;
 
 
-import org.jetbrains.annotations.NotNull;
+
 
 import java.util.Arrays;
 
@@ -109,7 +109,7 @@ public class prop_1 {
         return ret;
     }
 
-    public int [] solve1(@NotNull int[] nums, int target){
+    public int [] solve1(int[] nums, int target){
         int[] ret = {-1,-1};
         if(nums.length<2) return ret;
         if(nums.length==2){
